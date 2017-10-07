@@ -1,0 +1,30 @@
+{
+  "name": "generator-qb-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/autioch/generator-qb-webpack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/autioch/generator-qb-webpack/issues"
+  },
+  "homepage": "https://github.com/autioch/generator-qb-webpack#readme",
+  "dependencies": {
+    "fs-readdir-recursive": "^1.0.0",
+    "yeoman-generator": "^2.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.8.0",
+    "eslint-config-qb": "^1.0.0"
+  }
+}
