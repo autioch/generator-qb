@@ -17,11 +17,11 @@
   },
   "homepage": "https://github.com/autioch/generator-qb-webpack#readme",
   "dependencies": {
-    "fs-readdir-recursive": "^1.0.0",
-    "yeoman-generator": "^2.0.1"
+    "fs-readdir-recursive": "1.0.0",
+    "yeoman-generator": "2.0.1"
   },
   "devDependencies": {
-    "eslint": "^4.8.0",
-    "eslint-config-qb": "^1.0.0"
+    "eslint": "4.8.0",
+    "eslint-config-qb": "1.0.0"
   }
 }

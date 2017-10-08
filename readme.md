@@ -1,16 +1,28 @@
-# Generator qb-webpack
+# Qb Generator
+Yeoman generator. Actually few generators that I reuse in everyday coding.
 
-Yeoman generator - raw eslint and webpack with repository on github.
+## Installation
+`npm i -g yo generator-qb`
 
-## Adding Preact
-1. Install packages:
-`npm i preact babel-plugin-transform-react-jsx`
-`npm i -D eslint-plugin-react`
-2. Modify `tools/webpack.config.js`. Add option to javascript loader:
-```javascript
-  plugins: [
-    ['transform-react-jsx', {
-      pragma: 'h'
-    }]
-]
-```
+## Usage
+Navigate to the directory in which You wish to setup a package.
+
+### App
+This is the default, required generator. It creates an empty package.
+`yo qb`
+
+### Module
+Standard module for any enviroment.
+`yo qb:module`
+
+### Server
+Most basic express server.
+`yo qb:server`
+
+### WebApp
+Most common webpack 1 config.
+`yo qb:webapp`
+
+## TODO
+1. Update `eslint` and `eslint-config-qb`.
+2. Update `webpack` to newest version.
