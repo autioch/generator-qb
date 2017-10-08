@@ -1,1 +1,1 @@
-import './styles';
+require('./styles');

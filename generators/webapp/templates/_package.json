@@ -15,14 +15,14 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/<%= githubUser %>/<%= packageName %>.git"
+    "url": "git+https://github.com/<%= accountName %>/<%= packageName %>.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/<%= githubUser %>/<%= packageName %>/issues"
+    "url": "https://github.com/<%= accountName %>/<%= packageName %>/issues"
   },
-  "homepage": "https://github.com/<%= githubUser %>/<%= packageName %>#readme",
+  "homepage": "https://github.com/<%= accountName %>/<%= packageName %>#readme",
   "dependencies": {
     "autoprefixer": "7.1.4",
     "babel-core": "6.26.0",
