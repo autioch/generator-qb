@@ -17,9 +17,14 @@ This is the default, required generator. It creates an empty package.
 `yo qb`
 
 ### Module
-Standard module for any enviroment.
+Standard module for any environment.
 
 `yo qb:module`
+
+### React
+React + Antd + Webpack 3 web app.
+
+`yo qb:react`
 
 ### Server
 Most basic express server.
@@ -36,3 +41,4 @@ Most common webpack 1 config.
 ## TODO
 1. Update `eslint` and `eslint-config-qb`.
 2. Update `webpack` to newest version.
+3. Better use options.
