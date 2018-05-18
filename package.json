@@ -6,6 +6,10 @@
   "keywords": [
     "yeoman-generator"
   ],
+  "scripts": {
+    "preversion": "npm run lint",
+    "postversion": "git push origin HEAD --follow-tags && npm publish"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/autioch/generator-qb-webpack.git"

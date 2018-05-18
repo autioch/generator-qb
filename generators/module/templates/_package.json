@@ -7,7 +7,9 @@
     "lint": "eslint ./src --fix --ext .js",
     "lint:test": "eslint ./spec --fix --ext .js",
     "test": "mocha --reporter=list spec/**/*.spec.js",
-    "test:watch": "mocha --reporter=min --watch spec/**/*.spec.js & exit 0"
+    "test:watch": "mocha --reporter=min --watch spec/**/*.spec.js & exit 0",
+    "preversion": "npm run lint",
+    "postversion": "git push origin HEAD --follow-tags && npm publish"
   },
   "keywords": [],
   "repository": {

@@ -32,13 +32,6 @@ Most basic express server.
 `yo qb:server`
 
 ### WebApp
-Most common webpack 1 config.
+Most common webpack 4 config.
 
 `yo qb:webapp`
-
-
-
-## TODO
-1. Update `eslint` and `eslint-config-qb`.
-2. Update `webpack` to newest version.
-3. Better use options.

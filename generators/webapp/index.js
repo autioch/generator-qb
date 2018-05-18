@@ -37,7 +37,7 @@ module.exports = class extends Generator {
     filesToCopy.forEach((fileName) => {
       this.fs.copyTpl(
         this.templatePath(fileName),
-        this.destinationPath(fileName.replace(/^_/, '')),
+        this.destinationPath(fileName.replace(/^_/, '').replace(/_$/, '')),
         templateData
       );
     });
