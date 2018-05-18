@@ -7,7 +7,6 @@
     "yeoman-generator"
   ],
   "scripts": {
-    "preversion": "npm run lint",
     "postversion": "git push origin HEAD --follow-tags && npm publish"
   },
   "repository": {
