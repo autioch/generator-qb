@@ -3,7 +3,7 @@
 /* eslint-disable line-comment-position */
 const { join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const LiveReloadPlugin = require('webpack-livereload-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
@@ -56,10 +56,16 @@ module.exports = {
     rules: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      loader: 'babel-loader',
-      query: {
-        presets: ['es2015'],
-        plugins: ['transform-object-rest-spread']
+      use: {
+        loader: 'babel-loader',
+        options: {
+          plugins: [
+            '@babel/plugin-syntax-dynamic-import',
+            '@babel/plugin-proposal-optional-chaining',
+            '@babel/plugin-proposal-nullish-coalescing-operator'
+          ],
+          presets: ['@babel/preset-env']
+        }
       }
     }, {
       test: /\.(ttf|eot|woff)$/i,
@@ -77,32 +83,26 @@ module.exports = {
         {
           loader: 'css-loader',
           options: {
-            minimize: argv.production,
-            sourceMap: !argv.production
+            sourceMap: false
           }
         }, {
           loader: 'postcss-loader',
           options: {
-            sourceMap: !argv.production,
+            sourceMap: false,
             plugins: () => [autoprefixer({
-              browsers: ['last 2 versions'],
               cascade: false
             })]
           }
         }, {
           loader: 'sass-loader',
           options: {
-            sourceMap: !argv.production
+            sourceMap: false
           }
         }]
     }]
   },
   plugins: [
-    new CleanWebpackPlugin([join('docs', '*')], {
-      root: projectPath,
-      verbose: false,
-      dry: false
-    }),
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: `files/main${nameSuffix}.css`
     }),
